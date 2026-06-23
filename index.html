@@ -346,8 +346,43 @@
       <h2 class="section-title">Contato</h2>
       <p class="section-sub">Vamos conversar?</p>
     </div>
-
-    <div class="contact-wrap">
+    <div class="contact-wrap contact-wrap--split">
+      <!-- FORMULÁRIO -->
+      <div class="contact-form-side reveal">
+        <form id="contactForm" novalidate>
+  
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name">
+            <span class="field-error" id="erroNome"></span>
+          </div>
+  
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email">
+            <span class="field-error" id="erroEmail"></span>
+          </div>
+  
+          <div class="form-group">
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Ex: Proposta de projeto">
+            <span class="field-error" id="erroAssunto"></span>
+          </div>
+  
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+            <span class="field-error" id="erroMensagem"></span>
+          </div>
+  
+          <button type="submit" class="btn-primary form-submit" id="btnEnviar">
+            <span id="btnTexto">Enviar Mensagem</span>
+          </button>
+  
+          <p class="form-feedback" id="formFeedback"></p>
+        </form>
+      </div>
+  
       <div class="contact-links">
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anazjuliasilva15@gmail.com" target="_blank" class="contact-card reveal">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">

@@ -802,3 +802,97 @@ h1 {
     display: none;
   }
 }
+
+/* ── FORMULÁRIO DE CONTATO ──────────────── */
+.contact-wrap--split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-form-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(0, 245, 255, 0.1);
+}
+
+/* campo inválido */
+.form-group input.invalido,
+.form-group textarea.invalido {
+  border-color: var(--magenta);
+  box-shadow: 0 0 0 3px rgba(255, 0, 229, 0.1);
+}
+
+.field-error {
+  font-size: 0.78rem;
+  color: var(--magenta);
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 1rem;
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-feedback {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+  min-height: 1.2rem;
+}
+
+.form-feedback.sucesso { color: var(--green); }
+.form-feedback.erro    { color: var(--magenta); }
+
+/* responsivo */
+@media (max-width: 768px) {
+  .contact-wrap--split {
+    grid-template-columns: 1fr;
+  }
+}
