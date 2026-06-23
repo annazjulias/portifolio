@@ -61,3 +61,9 @@ if ('IntersectionObserver' in window) {
   // fallback: navegadores sem suporte simplesmente mostram tudo
   revealEls.forEach((el) => el.classList.add('is-visible'));
 }
+
+const sobre = document.querySelector('.sobre');
+
+if (window.innerWidth <= 600) {
+  sobre.textContent = 'Sobre';
+}

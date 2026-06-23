@@ -747,7 +747,7 @@ h1 {
       background: transparent;
       border: none;
       box-shadow: none;
-      gap: 20px;
+      gap: 35px;
     }
   
     .nav-toggle {
@@ -776,4 +776,29 @@ h1 {
   .about-photo-2 { width: 130px; height: 150px; }
   .about-text { text-align: center; }
   .about-cv { align-self: center; }
+}
+
+@media (max-width: 500px) {
+  nav {
+    width: 95%;
+    padding: 10px 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    gap: 15px;
+  }
+  .nav-links a { font-size: 13px; }
+  
+  .nav-toggle {
+    display: none;
+  }
 }
